@@ -11,7 +11,6 @@ import Document from './Document';
 
 
 const App = (props) => (
-
   <Router>
     <Switch>
       <Redirect exact from="/" to="/document/document1"/>

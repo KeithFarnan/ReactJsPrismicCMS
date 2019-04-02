@@ -1,9 +1,7 @@
 import React from 'react';
 import NotFound from './NotFound';
 import PrismicReact from 'prismic-reactjs';
-//import Sidebar from './sidebar'
 
-// Declare your component
 export default class Document extends React.Component {
 
   state = {
@@ -47,7 +45,7 @@ export default class Document extends React.Component {
         {/* This is how to insert a Rich Text field as plain text */}
         <h1>{PrismicReact.RichText.asText(this.state.doc.data.title)}</h1>
         {/* This is how to insert a Rich Text field into your template as html */}
-        {PrismicReact.RichText.render(this.state.doc.data.description, this.props.prismicCtx.linkResolver)}
+        
         <p>{PrismicReact.RichText.asText(this.state.doc.data.documentbody)}</p>
       </div>
     );
