@@ -1,0 +1,61 @@
+import React from 'react';
+import NotFound from './NotFound';
+import SliceZone from './slices/SliceZone';
+import Header from './Header';
+import Footer from './Footer';
+import Loader from './Loader';
+import { Link, RichText, Date } from 'prismic-reactjs'
+
+export default class documents extends React.Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+			doc: null,
+			notFound: false,
+			documents: [],
+		}
+		if (props.prismicCtx) {
+			this.fetchPage(props);
+		}
+	}
+
+	componentDidUpdate(props) {
+	  this.props.prismicCtx.toolbar();
+	  if (!props.prismicCtx) {
+	  	this.fetchPage(this.props);
+	  }
+	}
+
+	fetchPage(props) {
+    if (props.prismicCtx) {
+      // We are using the function to get a document by its uid
+      return props.prismicCtx.api.getByUID('documents', props.match.params.uid, {}, (err, doc) => {
+        if (doc) {
+          // We put the retrieved content in the state as a doc variable
+          this.setState({ doc });
+        } else {
+          // We changed the state to display error not found if no matched doc
+          this.setState({ notFound: !doc });
+        }
+      });
+    }
+    return null;
+  }
+
+  render() {
+    if (this.state.doc) {
+      return (
+        <div className="document" data-wio-id={this.state.doc.id}>
+          <Header prismicCtx={this.props.prismicCtx} />
+          <div className="container">
+            <SliceZone sliceZone={this.state.doc.data.page_content} prismicCtx={this.props.prismicCtx} />
+          </div>
+          <Footer />
+        </div>
+      );
+    } else if (this.state.notFound) {
+      return <NotFound />;
+    }
+    return <Loader />;
+  }
+}
