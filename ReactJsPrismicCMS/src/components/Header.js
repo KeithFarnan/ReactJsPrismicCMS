@@ -1,5 +1,6 @@
 import React from 'react';
 import {Link, RichText} from 'prismic-reactjs';
+import Sidebar from './Sidebar'
 
 export default class Header extends React.Component {
   constructor(props){
@@ -39,6 +40,7 @@ export default class Header extends React.Component {
 
   menuLinks() {
     return this.state.doc.data.menu_links.map((menuLink) => {
+      //return < Sidebar/>;
       return (
 
         <li key={menuLink.link.id}>
@@ -54,6 +56,7 @@ export default class Header extends React.Component {
     if (this.state.doc) {
 
       return (
+        
         <header className="site-header">
           <a href="/">
             <div className="logo">ReactJS Prismic Site</div>
@@ -64,7 +67,7 @@ export default class Header extends React.Component {
               {this.menuLinks()}
             </ul>
           </nav>
-          
+
         </header>
       );
     } else {

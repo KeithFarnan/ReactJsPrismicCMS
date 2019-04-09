@@ -5,4 +5,5 @@ import PrismicApp from './PrismicApp';
 ReactDOM.render(
   <PrismicApp />,
   document.getElementById('root'),
+  serviceWorker.register();
 );
