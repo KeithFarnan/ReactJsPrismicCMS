@@ -1,0 +1,44 @@
+{
+  "name": "reactjs-starter",
+  "version": "0.1.4",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "cheeseburger-menu": "0.0.13",
+    "highlight.js": "~9.13.1",
+    "jquery": "~3.3.1",
+    "prismic-javascript": "^2.0.1",
+    "prismic-reactjs": "^0.3.2",
+    "qs": "^6.4.0",
+    "react": "^16.8.6",
+    "react-bootstrap": "^1.0.0-beta.6",
+    "react-burger-menu": "^2.6.8",
+    "react-dom": "^16.8.6",
+    "react-hamburger-menu": "^1.1.1",
+    "react-helmet": "^5.2.0",
+    "react-router-dom": "~4.3.1",
+    "react-sidebar": "^3.0.2",
+    "react-sidenav": "^3.1.9",
+    "styled-components": "^4.2.0",
+    "whatwg-fetch": "~3.0.0"
+  },
+  "devDependencies": {
+    "react-scripts": "^2.1.8"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "engines": {
+    "node": ">=4.8.1",
+    "npm": ">=2.15.11"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}
