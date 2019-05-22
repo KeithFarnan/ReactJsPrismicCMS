@@ -1,4 +1,0 @@
-[build]
-base = "ReactJsPrismicCMS/"
-publish = "ReactJsPrismicCMS/build/"
-command = "yarn build"
