@@ -1,33 +1,28 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import Navbar from './Components/Layout/Navbar';
-// importing react router for application navigation
-import { Switch, Route } from 'react-router-dom';
-import Footer from './Components/Layout/Footer';
-// importing Pages to the main application
-import Home from './Components/Pages/Home';
-import News from './Components/Pages/News';
-import Contacts from './Components/Pages/Contacts';
-import Details from './Components/Pages/Details';
-import NotFound from './Components/Pages/NotFound';
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+} from 'react-router-dom';
+import Preview from './Preview';
+import NotFound from './components/NotFound';
+import HomePage from './components/HomePage';
+import Page from './components/Page';
+import Pages from './components/Pages'
+import Document from './components/Document'
+import Documents from './components/Documents'
 
-
-function App() {
-  return (
-    <div className="App">
-      <Navbar /> 
-      <Switch>
-        <Route path="/home" component={Home} />
-        <Route path="/news" component={News} />
-        <Route path="/contacts" component={Contacts} />
-        <Route path="/details" component={Details} />
-        <Route path="/notFound" component={NotFound} />
-      </Switch>
-      <Footer />
-    </div>
-  );
-}
-
+const App = (props) => (
+  <Router>
+    <Switch>
+      <Route exact path="/" render={routeProps => <HomePage {...routeProps} prismicCtx={props.prismicCtx} />} />
+      <Route exact path="/preview" render={routeProps => <Preview {...routeProps} prismicCtx={props.prismicCtx} />} />
+      <Route exact path="/pages/:uid" render={routeProps => <Page {...routeProps} prismicCtx={props.prismicCtx} />} />
+      <Route exact path="/pages" render={routeProps => <Pages {...routeProps} prismicCtx={props.prismicCtx} />} />
+      <Route exact path="/documents/:uid" render={routeProps => <Document {...routeProps} prismicCtx={props.prismicCtx} />} />
+      <Route exact path="/documents" render={routeProps => <Documents {...routeProps} prismicCtx={props.prismicCtx} />} />
+      <Route component={NotFound} />
+    </Switch>
+  </Router>
+);
 export default App;

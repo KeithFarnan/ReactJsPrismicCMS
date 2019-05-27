@@ -1,6 +1,5 @@
 import React from 'react';
 import {Link, RichText} from 'prismic-reactjs';
-import { Navbar, Nav, NavItem, Dropdown } from 'react-bootstrap';
 
 export default class Header extends React.Component {
   constructor(props){
@@ -8,8 +7,6 @@ export default class Header extends React.Component {
     this.state = {
       doc: null,
       notFound: false,
-      menuOpen: false,
-
     }
     if (props.prismicCtx) {
       this.fetchPage(props);
@@ -42,8 +39,8 @@ export default class Header extends React.Component {
 
   menuLinks() {
     return this.state.doc.data.menu_links.map((menuLink) => {
-      //return < Sidebar/>;
       return (
+
         <li key={menuLink.link.id}>
           <a href={Link.url(menuLink.link, this.props.prismicCtx.linkResolver)}>
             {RichText.asText(menuLink.label)}
@@ -53,32 +50,19 @@ export default class Header extends React.Component {
     });
   }
 
-  handleClickOutside(){
-  this.setState({
-    listOpen: false
-  })
-}
-
-toggleList(){
-  this.setState(prevState => ({
-    listOpen: !prevState.listOpen
-  }))
-}
-
   render() {
     if (this.state.doc) {
-      
+
       return (
         <header className="site-header">
           <a href="/">
-            <div className="logo">ReacJs with A Prismic CMS</div>
+            <div className="logo">ReactJS Prismic Site</div>
           </a>
+
           <nav>
-            <Dropdown>
             <ul>
               {this.menuLinks()}
             </ul>
-            </Dropdown>
           </nav>
           
         </header>

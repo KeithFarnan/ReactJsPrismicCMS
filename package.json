@@ -1,38 +1,41 @@
 {
-  "name": "navbar-app",
-  "version": "0.1.0",
+  "name": "reactjs-starter",
+  "version": "0.1.4",
   "private": true,
   "dependencies": {
     "bootstrap": "^4.3.1",
-    "mdbreact": "^4.14.0",
+    "highlight.js": "~9.13.1",
+    "jquery": "~3.3.1",
+    "prismic-javascript": "^2.0.1",
+    "prismic-reactjs": "^0.3.2",
+    "qs": "^6.4.0",
     "react": "^16.8.6",
-    "react-bootstrap": "^1.0.0-beta.8",
+    "react-bootstrap": "^1.0.0-beta.6",
+    "react-burger-menu": "^2.6.8",
     "react-dom": "^16.8.6",
-    "react-router-dom": "^5.0.0",
-    "react-scripts": "3.0.1",
-    "react-select-search": "^0.9.6",
-    "react-test-renderer": "^16.8.6",
-    "styled-components": "^4.2.0"
+    "react-router-dom": "~4.3.1",
+    "react-sidenav": "^3.1.9",
+    "styled-components": "^4.2.0",
+    "whatwg-fetch": "~3.0.0"
+  },
+  "devDependencies": {
+    "http-server": "^0.11.1",
+    "react-scripts": "^2.1.8"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "PORT= process.env.PORT || 5000; react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
-  "eslintConfig": {
-    "extends": "react-app"
+  "engines": {
+    "node": ">=4.8.1",
+    "npm": ">=2.15.11"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  }
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }

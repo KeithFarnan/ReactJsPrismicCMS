@@ -35,7 +35,6 @@ export default class PrismicApp extends React.Component {
   }
 
   render() {
-
     return <App prismicCtx={this.state.prismicCtx} />;
   }
 }
