@@ -4,7 +4,6 @@ import SliceZone from './slices/SliceZone';
 import Header from './Header';
 import Footer from './Footer';
 import Loader from './Loader';
-import { Link, RichText, Date } from 'prismic-reactjs'
 
 export default class documents extends React.Component {
 	constructor(props) {
