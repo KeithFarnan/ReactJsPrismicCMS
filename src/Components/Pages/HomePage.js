@@ -1,10 +1,10 @@
 import React from 'react';
-import NotFound from './Pages/NotFound';
+import NotFound from './NotFound';
 import {Link, RichText} from 'prismic-reactjs';
-import SliceZone from './slices/SliceZone';
-import Header from './Layout/Header';
-import Footer from './Layout/Footer';
-import Loader from './Pages/Loader';
+import SliceZone from '../slices/SliceZone';
+import Header from '../Layout/Header';
+import Footer from '../Layout/Footer';
+import Loader from './Loader';
 
 export default class HomePage extends React.Component {
   constructor(props){

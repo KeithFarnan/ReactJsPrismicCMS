@@ -1,9 +1,9 @@
 import React from 'react';
-import NotFound from './Pages/NotFound';
-import SliceZone from './slices/SliceZone';
-import Header from './Layout/Header';
-import Footer from './Layout/Footer';
-import Loader from './Pages/Loader';
+import NotFound from './NotFound';
+import SliceZone from '../slices/SliceZone';
+import Header from '../Layout/Header';
+import Footer from '../Layout/Footer';
+import Loader from './Loader';
 
 export default class Page extends React.Component {
   constructor(props){

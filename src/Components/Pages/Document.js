@@ -1,11 +1,11 @@
 import React from 'react';
-import NotFound from './Pages/NotFound';
-import SliceZone from './slices/SliceZone';
-import Header from './Layout/Header';
-import Footer from './Layout/Footer';
-import Loader from './Pages/Loader';
+import NotFound from './NotFound';
+import SliceZone from '../slices/SliceZone';
+import Header from '../Layout/Header';
+import Footer from '../Layout/Footer';
+import Loader from './Loader';
 
-export default class Page extends React.Component {
+export default class Document extends React.Component {
   constructor(props){
     super(props);
     this.state = {
@@ -27,7 +27,7 @@ export default class Page extends React.Component {
   fetchPage(props) {
     if (props.prismicCtx) {
       // We are using the function to get a document by its uid
-      return props.prismicCtx.api.getByUID('page', props.match.params.uid, {}, (err, doc) => {
+      return props.prismicCtx.api.getByUID('document', props.match.params.uid, {}, (err, doc) => {
         if (doc) {
           // We put the retrieved content in the state as a doc variable
           this.setState({ doc });
@@ -43,7 +43,7 @@ export default class Page extends React.Component {
   render() {
     if (this.state.doc) {
       return (
-        <div className="page" data-wio-id={this.state.doc.id}>
+        <div className="document" data-wio-id={this.state.doc.id}>
           <Header prismicCtx={this.props.prismicCtx} />
           <div className="container">
             <SliceZone sliceZone={this.state.doc.data.page_content} prismicCtx={this.props.prismicCtx} />

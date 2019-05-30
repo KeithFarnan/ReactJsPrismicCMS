@@ -1,9 +1,9 @@
 import React from 'react';
-import NotFound from './NotFound';
+import NotFound from './Pages/NotFound';
 import SliceZone from './slices/SliceZone';
-import Header from './Header';
-import Footer from './Footer';
-import Loader from './Loader';
+import Header from './Layout/Header';
+import Footer from './Layout/Footer';
+import Loader from './Pages/Loader';
 
 export default class Document extends React.Component {
   constructor(props){

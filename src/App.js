@@ -4,12 +4,12 @@ import {
   Route,
   Switch,
 } from 'react-router-dom';
-import NotFound from './Components/NotFound';
-import HomePage from './Components/HomePage';
-import Page from './Components/Page';
-import Pages from './Components/Pages'
-import Document from './Components/Document'
-import Documents from './Components/Documents'
+import NotFound from './Components/Pages/NotFound';
+import HomePage from './Components/Pages/HomePage';
+import Page from './Components/Pages/Page';
+import Pages from './Components/Pages/AllPages'
+import Document from './Components/Pages/Document'
+import Documents from './Components/Pages/AllDocuments'
 
 const App = (props) => (
   <Router>
