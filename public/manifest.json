@@ -1,20 +1,18 @@
 {
-  "short_name": "React",
+  "short_name": "ReactJS App",
   "name": "Create React App With Prismic CMS",
+  
   "icons": [
     {
       "src": "favicon.ico",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
-    },
-    {
-      "src": "android-chrome-512x512.png",
-      "sizes": "512x512",
-      "type": "image/png"
-    }
+    }    
   ],
-  "start_url": "./index.html",
+  
+  "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#3367D6",
+  "background_color": "#3367D6",
+  "orientation": "portrait"
 }
