@@ -5,7 +5,7 @@ export default class Footer extends React.Component {
   render() {
     return (
       <footer>
-        <a href="https://prismic.io" target="_blank" rel="noopener noreferrer">
+        <a href="https://github.com/KeithFarnan/ReactJsPrismicCMS" target="_blank" rel="noopener noreferrer">
         Link to GitHub repository 
         </a>
         <br/>
