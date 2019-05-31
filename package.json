@@ -5,16 +5,13 @@
   "dependencies": {
     "bootstrap": "^4.3.1",
     "highlight.js": "~9.13.1",
-    "jquery": "^3.4.1",
     "prismic-javascript": "^2.0.3",
     "prismic-reactjs": "^0.3.2",
     "qs": "^6.7.0",
     "react": "^16.8.6",
     "react-bootstrap": "^1.0.0-beta.8",
-    "react-burger-menu": "^2.6.10",
     "react-dom": "^16.8.6",
     "react-router-dom": "~4.3.1",
-    "react-sidenav": "^3.1.9",
     "styled-components": "^4.2.0",
     "whatwg-fetch": "~3.0.0"
   },
