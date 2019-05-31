@@ -11,7 +11,7 @@ import Pages from './Components/Pages/AllPages'
 import Document from './Components/Pages/Document'
 import Documents from './Components/Pages/AllDocuments'
 
-const App = (props) => (
+const Routes = (props) => (
   <Router>
     <Switch>
       <Route exact path="/" render={routeProps => <HomePage {...routeProps} prismicCtx={props.prismicCtx} />} />
@@ -23,4 +23,4 @@ const App = (props) => (
     </Switch>
   </Router>
 );
-export default App;
+export default Routes;
