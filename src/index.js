@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import PrismicApp from './PrismicApp';
-import * as registerServiceWorker from './registerServiceWorker';
+import * as ServiceWorker from './serviceWorker'
 
 ReactDOM.render(
   <PrismicApp />,
   document.getElementById('root'),
 );
-registerServiceWorker.register();
+ServiceWorker.register();
