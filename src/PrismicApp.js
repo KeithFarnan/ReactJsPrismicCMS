@@ -2,7 +2,8 @@ import React from 'react';
 import 'whatwg-fetch';
 import Prismic from 'prismic-javascript';
 import PrismicConfig from './prismic-configuration';
-import Routes from './Routes';
+//import Routes from './Routes';
+import App from './App';
 
 export default class PrismicApp extends React.Component {
   constructor(props) {
@@ -35,6 +36,6 @@ export default class PrismicApp extends React.Component {
   }
 
   render() {
-    return <Routes prismicCtx={this.state.prismicCtx} />;
+    return <App prismicCtx={this.state.prismicCtx} />;
   }
 }

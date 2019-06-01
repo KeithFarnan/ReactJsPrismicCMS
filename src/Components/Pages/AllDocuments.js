@@ -1,6 +1,6 @@
 import React from 'react';
 import NotFound from './NotFound';
-import SliceZone from '../slices/SliceZone';
+import SliceZone from '../Slices/SliceZone';
 import Header from '../Layout/Header';
 import Footer from '../Layout/Footer';
 import Loader from './Loader';
