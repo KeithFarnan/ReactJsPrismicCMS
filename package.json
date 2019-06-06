@@ -1,39 +1,34 @@
 {
-  "name": "reactjs-starter",
-  "version": "0.1.4",
-  "private": true,
-  "dependencies": {
-    "bootstrap": "^4.3.1",
-    "highlight.js": "~9.13.1",
-    "mdbreact": "^4.15.0",
-    "prismic-javascript": "^2.0.3",
-    "prismic-reactjs": "^0.3.2",
-    "qs": "^6.7.0",
-    "react": "^16.8.6",
-    "react-bootstrap": "^1.0.0-beta.9",
-    "react-dom": "^16.8.6",
-    "react-router-dom": "~4.3.1",
-    "styled-components": "^4.2.1",
-    "whatwg-fetch": "~3.0.0"
-  },
-  "devDependencies": {
-    "http-server": "^0.11.1",
-    "react-scripts": "^3.0.1"
-  },
-  "scripts": {
-    "start": "PORT= process.env.PORT || 5000; react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
-  },
-  "engines": {
-    "node": ">=4.8.1",
-    "npm": ">=2.15.11"
-  },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ]
+	"name": "reactjs-starter",
+	"version": "0.1.4",
+	"private": true,
+	"dependencies": {
+		"bootstrap": "^4.3.1",
+		"highlight.js": "~9.13.1",
+		"mdbreact": "^4.15.0",
+		"prismic-javascript": "^2.0.3",
+		"prismic-reactjs": "^0.3.2",
+		"qs": "^6.7.0",
+		"react": "^16.8.6",
+		"react-bootstrap": "^1.0.0-beta.9",
+		"react-dom": "^16.8.6",
+		"react-router-dom": "~4.3.1",
+		"styled-components": "^4.2.1",
+		"whatwg-fetch": "~3.0.0"
+	},
+	"devDependencies": {
+		"http-server": "^0.11.1",
+		"react-scripts": "^3.0.1"
+	},
+	"scripts": {
+		"start": "PORT= process.env.PORT || 5000; react-scripts start",
+		"build": "react-scripts build",
+		"test": "react-scripts test --env=jsdom",
+		"eject": "react-scripts eject"
+	},
+	"engines": {
+		"node": ">=4.8.1",
+		"npm": ">=2.15.11"
+	},
+	"browserslist": [ ">0.2%", "not dead", "not ie <= 11", "not op_mini all" ]
 }

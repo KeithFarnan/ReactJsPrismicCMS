@@ -6,36 +6,38 @@ import PrismicConfig from './prismic-configuration';
 import App from './App';
 
 export default class PrismicApp extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { prismicCtx: null };
-    this.buildContext().then((prismicCtx) => {
-      this.setState({ prismicCtx });
-    }).catch((e) => {
-      console.error(`Cannot contact the API, check your prismic configuration:\n${e}`);
-    });
-  }
+	constructor(props) {
+		super(props);
+		this.state = { prismicCtx: null };
+		this.buildContext()
+			.then((prismicCtx) => {
+				this.setState({ prismicCtx });
+			})
+			.catch((e) => {
+				console.error(`Cannot contact the API, check your prismic configuration:\n${e}`);
+			});
+	}
 
-  refreshToolbar() {
-    const maybeCurrentExperiment = this.api.currentExperiment();
-    if (maybeCurrentExperiment) {
-      window.PrismicToolbar.startExperiment(maybeCurrentExperiment.googleId());
-    }
-    window.PrismicToolbar.setup(PrismicConfig.apiEndpoint);
-  }
+	refreshToolbar() {
+		const maybeCurrentExperiment = this.api.currentExperiment();
+		if (maybeCurrentExperiment) {
+			window.PrismicToolbar.startExperiment(maybeCurrentExperiment.googleId());
+		}
+		window.PrismicToolbar.setup(PrismicConfig.apiEndpoint);
+	}
 
-  buildContext() {
-    const accessToken = PrismicConfig.accessToken;
-    return Prismic.api(PrismicConfig.apiEndpoint, { accessToken }).then(api => ({
-      api,
-      endpoint: PrismicConfig.apiEndpoint,
-      accessToken,
-      linkResolver: PrismicConfig.linkResolver,
-      toolbar: this.refreshToolbar,
-    }));
-  }
+	buildContext() {
+		const accessToken = PrismicConfig.accessToken;
+		return Prismic.api(PrismicConfig.apiEndpoint, { accessToken }).then((api) => ({
+			api,
+			endpoint: PrismicConfig.apiEndpoint,
+			accessToken,
+			linkResolver: PrismicConfig.linkResolver,
+			toolbar: this.refreshToolbar
+		}));
+	}
 
-  render() {
-    return <App prismicCtx={this.state.prismicCtx} />;
-  }
+	render() {
+		return <App prismicCtx={this.state.prismicCtx} />;
+	}
 }

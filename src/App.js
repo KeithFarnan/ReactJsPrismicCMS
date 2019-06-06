@@ -7,14 +7,7 @@ import Routes from './Routes';
 //import Navbar from './Components/Layout/Navbar'
 
 function App() {
-    return (
-      
-      
-      <Routes />
-     
-    );
-  }
-  
-  export default App;
+	return <Routes />;
+}
 
-
+export default App;
